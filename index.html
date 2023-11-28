@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    
+    
+    <div id="app">
+        <div id = "nav-bar">navbar <button onclick="addTab()">new tab</button></div>
+        <!-- <div style="display: flex;flex:1">  -->
+                <ux-splitpane  orientation='!vertical' size=220 style="flex:1; background-color:#444;">
+
+                    <j-tabview name="family-tree" id="tv">
+                        <div>
+                            <textarea>HELLO WORLD</textarea>
+                        </div>
+                        <!-- <div contenteditable=true>
+                            <p>Four Score and Seven Years Ago</p>
+                        </div> -->
+                        <!-- <j-tab text="Wife" closeable=true>
+                            <div><h3>Sexy Mamma</h3></div>
+                        </j-tab>
+                        <j-tab text="Son">
+                            <div><h3>Hansome Boy</h3></div>
+                        </j-tab>
+                        <j-tab text="Daughter" default>
+                            <h3>Beautiful Girl</h3>
+                        </j-tab>
+                        <j-tab text="Aunty" closeable=true>
+                            <h3>Lives In Another Country</h3>
+                        </j-tab> -->
+                    </j-tabview>
+              
+
+                <j-zoneview id="doc" name="main-view">
+                    <j-tabview name="family-tree" id="tv2">
+                        <div>
+                            <textarea>HELLO WORLD</textarea>
+                        </div>
+                        <!-- <div contenteditable=true>
+                            <p>Four Score and Seven Years Ago</p>
+                        </div> -->
+                        <j-tab text="Wife" closeable=true>
+                            <div><h3>Sexy Mamma</h3></div>
+                        </j-tab>
+                        <j-tab text="Son">
+                            <div><h3>Hansome Boy</h3></div>
+                        </j-tab>
+                        <j-tab text="Daughter" default>
+                            <h3>Beautiful Girl</h3>
+                        </j-tab>
+                        <j-tab text="Aunty" closeable=true>
+                            <h3>Lives In Another Country</h3>
+                        </j-tab>
+                    </j-tabview>
+                </j-zoneview>
+            </ux-splitpane>
+        <!-- </div> -->
+    </div>
+    <!-- <div id ="out">HELLO?</div> -->
+
+    <script>
+        let z = 1;
+        function addTab() {
+            // let tab = document.createElement('j-tab');
+            //     tab.setAttribute('text', 'new tab');
+            //     tab.setAttribute('closeable', 'true');
+            let div = document.createElement('div');
+            let ta = div.appendChild(document.createElement('button'));
+                ta.innerText = 'Click Me!';
+                ta.onclick = (e) => { alert("Hands off buddy!!");}
+            
+            tv.add("tab " + (z++), div);
+
+        }
+    </script>
+
+</body>
+</html>
